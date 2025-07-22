@@ -5,7 +5,7 @@
 ## Demo 🚀
 
 Sahifani quyidagi link orqali onlaynda ko‘rishingiz mumkin:  
-[https://numonofcv.github.io/recipe-page-main/](https://numonofcv.github.io/recipe-page-main/)
+[Recipe Page](https://github.com/numonofcv/Frontend-Mentor-recipe-page-main?tab=readme-ov-file)
 
 ## Overview 📋
 
@@ -32,7 +32,7 @@ Bu loyiha Frontend Mentor challenge asosida tayyorlangan zamonaviy va responsiv 
 
 1. Repository-ni klonlang:
 
-git clone (https://github.com/numonofcv/recipe-page-main.git)
+git clone (https://github.com/numonofcv/Frontend-Mentor-recipe-page-main?tab=readme-ov-file)
 
 2. Loyihaga kirish:
 cd recipe-page-main
