@@ -1,0 +1,251 @@
+/* === Base === */
+/* Outfit variable font */
+@font-face {
+    font-family: 'Outfit';
+    src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* variable font weight range */
+    font-style: normal;
+}
+
+/* Young Serif regular */
+@font-face {
+    font-family: 'Young Serif';
+    src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* === Colors === */
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 50%, 90%);
+    --stone-150: hsl(20, 1%, 47%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    /* === Fonts === */
+    --ff-primary: 'Outfit', sans-serif;
+    --ff-heading: 'Young Serif', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-heading);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 2rem;
+}
+
+/* === Container === */
+.recipe {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.recipe__container {
+    border-radius: 0.8rem;
+    background-color: var(--white);
+}
+
+/* === Hero Section === */
+.recipe__image {
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+.recipe__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+    color: var(--stone-900);
+}
+
+.recipe__description {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin: 1rem 0;
+    color: var(--stone-150);
+    font-family: var(--ff-primary);
+}
+
+/* === Section Titles === */
+.recipe__section-title {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: 1px;
+    color: var(--brown-800);
+}
+
+/* === Preparation Time === */
+.recipe__prep-time {
+    width: 100%;
+    height: auto;
+    font-family: var(--ff-primary);
+    background-color: var(--rose-50);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.recipe__prep-time .recipe__section-title {
+    margin: 0;
+    margin-bottom: 0.8rem;
+    padding: 0;
+    color: var(--stone-900);
+}
+
+.recipe__prep-list {
+    padding: 0 3rem;
+    margin: 0;
+}
+
+.recipe__prep-item {
+    margin: 0.5rem 0;
+}
+
+/* === Ingredients === */
+.recipe__ingredients {
+    padding: 2rem 1rem;
+    border-bottom: 2px solid var(--stone-100);
+
+}
+
+.recipe__ingredients-list {
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+.recipe__ingredient {
+    font-size: 1rem;
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    color: var(--stone-150);
+}
+
+/* === Instructions === */
+.recipe__instructions {
+    padding: 2rem 1rem;
+    border-bottom: 2px solid var(--stone-100);
+}
+
+.recipe__steps {
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+.recipe__step {
+    font-family: var(--ff-primary);
+    color: var(--stone-150);
+}
+
+/* === Nutrition === */
+.recipe__nutrition-description {
+    font-family: var(--ff-primary);
+    color: var(--stone-150);
+    margin: 0;
+}
+
+.recipe__nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Collapse borders for a cleaner look */
+}
+
+.recipe__nutrition-row {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.recipe__nutrition-row:last-child {
+    border-bottom: none;
+}
+
+.recipe__nutrition-label {
+    padding: 12px 0;
+    color: var(--stone-150);
+    font-weight: 500;
+}
+
+.recipe__nutrition-value {
+    padding: 12px 0;
+    color: var(--stone-600);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* === Attribution === */
+.attribution .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+/* Mobil qurilmalar uchun */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .recipe__title {
+    font-size: 2rem; /* kichikroq sarlavha */
+  }
+
+  .recipe__section-title {
+    font-size: 1.5rem; /* kichikroq bo‘lim sarlavhalari */
+  }
+
+  .recipe__description,
+  .recipe__ingredient,
+  .recipe__step,
+  .recipe__nutrition-description {
+    font-size: 0.9rem; /* matnlarni biroz kichikroq qilish */
+  }
+
+  .recipe__prep-time {
+    padding: 1rem;
+  }
+
+  .recipe__prep-list,
+  .recipe__ingredients-list,
+  .recipe__steps {
+    padding: 0 1rem;
+  }
+
+  /* Jadvalni kichik ekranda to‘g‘ri ko‘rsatish uchun */
+  .recipe__nutrition-table {
+    font-size: 0.9rem;
+  }
+
+  /* Rasmni moslashtirish */
+  .recipe__image {
+    border-radius: 0.5rem;
+  }
+}
